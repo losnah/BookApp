@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     BookAdapter adapter;
     EditText editText;
     Context mContext;
-
+    ArrayList<BookItem> items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,28 +88,32 @@ public class MainActivity extends AppCompatActivity {
         btn_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String plus_content = editText.getText().toString();
-                adapter.addItem(new BookItem(plus_content,0));
 
-                try {
-                    BufferedWriter bw = new BufferedWriter(new FileWriter(getFilesDir() + "test.txt",true));
-                    PrintWriter pw = new PrintWriter(bw,true);
-                    pw.write(plus_content);
-                    pw.close();
-                }catch (IOException e){
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),"1. 예외발생",Toast.LENGTH_LONG).show();
-                }
-                adapter.notifyDataSetChanged();
-                try {
-                    BufferedWriter bw = new BufferedWriter(new FileWriter(getFilesDir() + "test.txt",true));
-                    PrintWriter pw = new PrintWriter(bw,true);
-                    pw.write("@@@");
-                    pw.close();
-                }catch (IOException e){
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(),"2. 예외발생",Toast.LENGTH_LONG).show();
-                }
+                String searchContent = editText.getText().toString();
+
+
+
+//                adapter.addItem(new BookItem(plus_content,0));
+//
+//                try {
+//                    BufferedWriter bw = new BufferedWriter(new FileWriter(getFilesDir() + "test.txt",true));
+//                    PrintWriter pw = new PrintWriter(bw,true);
+//                    pw.write(plus_content);
+//                    pw.close();
+//                }catch (IOException e){
+//                    e.printStackTrace();
+//                    Toast.makeText(getApplicationContext(),"1. 예외발생",Toast.LENGTH_LONG).show();
+//                }
+//                adapter.notifyDataSetChanged();
+//                try {
+//                    BufferedWriter bw = new BufferedWriter(new FileWriter(getFilesDir() + "test.txt",true));
+//                    PrintWriter pw = new PrintWriter(bw,true);
+//                    pw.write("@@@");
+//                    pw.close();
+//                }catch (IOException e){
+//                    e.printStackTrace();
+//                    Toast.makeText(getApplicationContext(),"2. 예외발생",Toast.LENGTH_LONG).show();
+//                }
             }
         });
 
@@ -188,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
     class BookAdapter extends BaseAdapter{
         //어뎁터가 데이터를 관리하며 데이터를 넣었다가 뺄 수도 있으므로 ArrayList를 활용하여 구현해보자.
 
-        ArrayList<BookItem> items = new ArrayList<BookItem>();
+        ArrayList<BookItem> items = new ArrayList<>();
         //걸그룹의 이름, 전화번호 등등이 필요할텐데 이거 하나로는 부족하니까
         //데이터형을 다양하게 담고있는 java파일을 하나 더 만들어줄거에요
 
@@ -196,6 +200,11 @@ public class MainActivity extends AppCompatActivity {
         public void addItem(BookItem item){
             items.add(item);
         }
+        public void clearItem(){ items.clear();}
+//        public ArrayList search(String keyword){
+//            ArrayList<BookItem> matchItem = new ArrayList<>();
+//            return matchItem;
+//        }
 
         //너네 어뎁터 안에 몇 개의 아이템이 있니? 아이템갯수 반환함수
         @Override
