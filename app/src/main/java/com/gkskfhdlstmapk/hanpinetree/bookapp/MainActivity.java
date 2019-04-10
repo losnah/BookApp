@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getApplicationContext(), "예외발생", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "예외발생 ", Toast.LENGTH_LONG).show();
         }
         String alltxt = readTxt();
 
