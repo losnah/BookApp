@@ -29,68 +29,70 @@
         android:text="테스트중입니다."
         android:textSize="15sp" />
 
-    <LinearLayout
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:background="#FFFFFF"
-        >
+        android:orientation="horizontal">
 
         <ToggleButton
             android:id="@+id/btn_heart1"
-            android:layout_width="40dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="11dp"
-            android:layout_marginLeft="11dp"
-            android:layout_marginBottom="0dp"
-            android:background="@drawable/heart1"
+            android:background="@drawable/bandface"
             android:focusable="false"
             android:textOff=""
-            android:textOn="" />
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ToggleButton
             android:id="@+id/btn_heart"
-            android:layout_width="14dp"
+            android:layout_width="140dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="11dp"
-            android:layout_marginLeft="11dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginStart="8dp"
             android:layout_weight="1"
-            android:background="@drawable/reply"
+            android:background="@drawable/bandshare"
             android:focusable="false"
             android:textOff=""
-            android:textOn="" />
-
-        <Space
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:textOn=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_heart1"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="1dp"
-            android:layout_height="22dp"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
             android:layout_weight="1"
-            android:background="@drawable/eye"
-            android:focusable="false" />
+            android:background="@drawable/bandeye"
+            android:focusable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_count"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:layout_weight="1"
+            android:text="0"
+            android:textColor="#D8D8D8"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="#D5D5D5"
-            android:text="0" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 
 </LinearLayout>
