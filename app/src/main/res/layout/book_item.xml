@@ -6,6 +6,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/frametop"
+        android:text="" />
+
     <TextView
         android:id="@+id/tv_book1"
         android:layout_width="match_parent"
@@ -49,19 +56,19 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="1dp"
-            android:layout_height="20dp"
+            android:layout_height="40dp"
             android:layout_weight="1"
-            android:focusable="false"
-            android:background="@drawable/eye" />
+            android:background="@drawable/share"
+            android:focusable="false" />
 
         <TextView
             android:id="@+id/tv_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="#000000"
+            android:textColor="#D5D5D5"
             android:text="0" />
 
     </LinearLayout>

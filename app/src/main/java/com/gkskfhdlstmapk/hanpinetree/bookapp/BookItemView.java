@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,8 +42,8 @@ public class BookItemView extends LinearLayout {
         btn_heart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(btn_heart.isChecked() == false) btn_heart.setBackgroundResource(R.drawable.heart2);
-                else   btn_heart.setBackgroundResource(R.drawable.heart1);
+                if(btn_heart.isChecked() == false) btn_heart.setBackgroundResource(R.drawable.heart1);
+                else   btn_heart.setBackgroundResource(R.drawable.heart3);
             }
         });
 

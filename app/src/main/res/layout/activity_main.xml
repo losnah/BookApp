@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -25,6 +26,28 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/activity_main_edittext_enroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="텍스트를 입력하세요"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/activity_main_add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="추가" />
+
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
@@ -33,7 +56,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="41dp" />
+        android:layout_marginLeft="0dp"/>
 
-</RelativeLayout>
+</LinearLayout>
