@@ -48,6 +48,22 @@
             android:textOff=""
             android:textOn="" />
 
+        <ToggleButton
+            android:id="@+id/btn_heart"
+            android:layout_width="14dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/reply"
+            android:focusable="false"
+            android:textOff=""
+            android:textOn="" />
+
         <Space
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -56,9 +72,9 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="1dp"
-            android:layout_height="40dp"
+            android:layout_height="22dp"
             android:layout_weight="1"
-            android:background="@drawable/share"
+            android:background="@drawable/eye"
             android:focusable="false" />
 
         <TextView

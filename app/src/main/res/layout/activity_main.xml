@@ -15,7 +15,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="텍스트를 입력하세요"
             android:inputType="textPersonName" />
 
         <Button
@@ -37,7 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="텍스트를 입력하세요"
             android:inputType="textPersonName" />
 
         <Button

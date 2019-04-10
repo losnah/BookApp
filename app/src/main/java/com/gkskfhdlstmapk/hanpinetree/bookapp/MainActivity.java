@@ -86,20 +86,24 @@ public class MainActivity extends AppCompatActivity {
         btn_plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //버튼 텍스트 변경
+                //버튼 텍스트 변경 및 검색 기능
                 if(btn_plus.getText().equals("검색")){
                     btn_plus.setText("취소");
+                    //검색하기
+                    String searchContent = editText.getText().toString();
+                    adapter.searchItem(searchContent);
+                    adapter.notifyDataSetChanged();
                 }
                 else{
                     btn_plus.setText("검색");
+                    adapter.clearItem();
+                    String alltxt = readTxt();
+                    String[] word = alltxt.split("@@@");
                     for(int i = 0 ; i < word.length; i++){
                         adapter.addItem(new BookItem(word[i],0));
                     }
+                    adapter.notifyDataSetChanged();
                 }
-                //검색하기
-                String searchContent = editText.getText().toString();
-                adapter.searchItem(searchContent);
-                adapter.notifyDataSetChanged();
             }
         });
 
